@@ -1,0 +1,6 @@
+<div class="navbar">
+    <div class="navbar-header">
+        Select a city
+    </div>
+    <app-city [class.active]="city === active" *ngFor="let city of cities" [city]="city" (click)="getWeather(city)"></app-city>
+</div>

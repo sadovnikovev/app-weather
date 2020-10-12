@@ -1,0 +1,24 @@
+.navbar-header{
+    font-size: 25px;
+    font-weight: bold;
+}
+.navbar{
+    border-right: 1px solid grey;
+}
+app-city{
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 5px;
+    width: 220px;
+    color: hotpink;
+    display: flex;
+    flex-direction: column;
+}
+app-city.active{
+    background-color: hotpink ;
+    color: white;
+ }
+ app-city:hover{
+    background-color: hotpink;
+    color: white;
+ }

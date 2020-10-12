@@ -1,0 +1,5 @@
+<app-header></app-header>
+<div class="cont">
+    <app-navbar-weather (select)="set($event)"></app-navbar-weather>
+    <app-weather-window *ngIf="visible" [response]="response"></app-weather-window>
+</div>

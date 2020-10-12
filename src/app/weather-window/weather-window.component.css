@@ -1,0 +1,15 @@
+.window-header{
+    font-size: 35px;
+    font-weight: bold;
+}
+.window-display{
+    display: flex;
+    flex-direction: column;
+}
+.conteiner{
+    padding-left: 30px;
+}
+.params{
+    font-size: 15px;
+    padding: 5px;
+}

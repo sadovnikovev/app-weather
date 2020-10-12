@@ -1,0 +1,11 @@
+<div class="conteiner">
+    <div class="window-header">
+            Weather in {{ response.title }}
+    </div>
+    <div class="window-display">
+        <div class="params">Temperature: {{ response.consolidated_weather[0].the_temp | number:'1.0-0' }} &#176;С</div> 
+        <div class="params">Air pressure: {{ response.consolidated_weather[0].air_pressure | number:'1.0-0' }} mbar</div> 
+        <div class="params">Visibility: {{ response.consolidated_weather[0].visibility | number:'1.0-0' }} miles</div> 
+        <div class="params">Wind speed: {{ response.consolidated_weather[0].wind_speed | number:'1.0-0' }} mph</div> 
+    </div>
+</div>    
