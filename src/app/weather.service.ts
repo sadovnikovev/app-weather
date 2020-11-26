@@ -1,8 +1,40 @@
-import { Injectable} from '@angular/core';
+import { Injectable, Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 export interface City {
   title: string;
   woeid: number;
+}
+export interface WeatherResponse {
+  consolidated_weather: ConsolidatedWeather[];
+  latt_long: string;
+  location_type: string;
+  parent: any;
+  sources: any[];
+  sun_rise: string;
+  sun_set: string;
+  time: Date;
+  timezone: string;
+  timezone_name: string;
+  title: string;
+  woeid: number;
+}
+export interface ConsolidatedWeather {
+  id: number;
+  applicable_date: Date;
+  weather_state_name: string;
+  weather_state_abbr: string;
+  wind_speed: number;
+  wind_direction: number;
+  wind_direction_compass: string;
+  max_temp: string;
+  min_temp: string;
+  the_temp: number;
+  air_pressure: number;
+  humidity: number;
+  visibility: number;
+  predictability: number;
 }
 
 @Injectable({
@@ -27,10 +59,15 @@ export class WeatherService {
       woeid: 2487956,
     },   
   ];
-      
-    getCities(): City[]{
-          
-        return this.cities;
-    }
-  constructor() { }
+  active: City;
+  constructor(private http: HttpClient) { }
+  @Output() select = new EventEmitter<WeatherResponse>();
+
+  getCities(): City[]{
+    return this.cities;
+  }
+
+  getWeatherById(id: number){
+    return this.http.get(`api/location/${id}/`)  
+  } 
 }

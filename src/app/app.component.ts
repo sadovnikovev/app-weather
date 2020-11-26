@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WeatherResponse } from './navbar-weather/navbar-weather.component';
+
 
 @Component({
   selector: 'app-root',
@@ -8,11 +8,11 @@ import { WeatherResponse } from './navbar-weather/navbar-weather.component';
 })
 export class AppComponent {
   title = 'weather-application';
-  response: WeatherResponse;
-  visible: boolean = false;
+ // response: WeatherResponse;
+  //visible: boolean = false;
 
-  set(response: WeatherResponse){
-    this.response = response;
-    this.visible = true;
-  }
+  //set(response: WeatherResponse){
+    //this.response = response;
+    //this.visible = true;
+  //}
 }

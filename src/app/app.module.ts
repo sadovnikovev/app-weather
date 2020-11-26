@@ -6,6 +6,11 @@ import { HeaderComponent } from './header/header.component';
 import { NavbarWeatherComponent } from './navbar-weather/navbar-weather.component';
 import { WeatherWindowComponent } from './weather-window/weather-window.component';
 import { CityComponent } from './city/city.component';
+import { SecondComponent } from './second/second.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FirstComponent } from './first/first.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { NotfoundComponent } from './notfound/notfound.component'
 
 @NgModule({
   declarations: [
@@ -13,11 +18,17 @@ import { CityComponent } from './city/city.component';
     HeaderComponent,
     NavbarWeatherComponent,
     WeatherWindowComponent,
-    CityComponent
+    CityComponent,
+    SecondComponent,
+    FirstComponent,
+    NavigationComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule, 
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
